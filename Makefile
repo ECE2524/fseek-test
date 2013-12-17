@@ -1,9 +1,10 @@
 CC ?= cc
-CC_FLAGS := -Wall -Wextra -pedantic -D_XOPEN_SOURCE_700
+CFLAGS := -Wall -Wextra -pedantic -D_XOPEN_SOURCE=700
 
 all: fdtests
 
 fdtests: fdaccess
+	@echo -e "Running tests...\n"
 	@echo "Redirect standard in from file:"
 	-./fdaccess <fox.txt
 	@echo 
